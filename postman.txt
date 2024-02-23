@@ -1,0 +1,53 @@
+//Log de pruebas con postman
+
+//InsertEmployee
+url:https://localhost:44355/Employees.aspx/InsertEmployee
+body raw:
+{
+    "names": "Diego Gonzalez",
+    "dpi": "3095",
+    "bornDate": "2002-05-07",
+    "sex": "M",
+    "dateEntryCompany": "2024-02-23",
+    "address": "123 Siempre Viva",
+    "nit": "12345",
+    "department": "9",
+    "status": "1"
+}
+response: 
+{
+    "d": "Insert successful"
+}
+
+//UpdateEmployee
+url:https://localhost:44355/Employees.aspx/UpdateEmployee
+body raw:
+{
+    "names": "Gonzalez Diego",
+    "dpi": "555555",
+    "bornDate": "2002-05-07",
+    "sex": "M",
+    "dateEntryCompany": "2024-02-23",
+    "address": "Siempre Viva 123",
+    "nit": "65442",
+    "department": "3",
+    "status": "2",
+    "employeeID": "1"
+}
+response:
+{
+    "d": "{\"Message\":\"Insert successful\"}"
+}
+
+
+//GenerateReport
+url:https://localhost:44355/Report.aspx/GenerateReport
+body raw:
+{
+    "departmentCode": "9"
+}
+response:
+{
+    "d": "{\"Names\":\"Gonzalez Diego\",\"DPI\":\"555555\",\"FechaNacimiento\":\"07/05/2002 0:00:00\",\"Sexo\":\"M\",\"FechaIngresoEmpresa\":\"23/02/2024 0:00:00\",\"Direccion\":\"Siempre Viva 123\",\"NIT\":\"65442\",\"CodigoDepartamento\":\"3\"}"
+}
+
